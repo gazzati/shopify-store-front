@@ -16,8 +16,8 @@ const Product: React.FC<Props> = ({ product }) => {
 
     const canvas = myCanvas.current.getContext("2d")
     const image = new Image()
-    ;(image.src = product.image_url),
-      (image.onload = () => {
+    image.src = product.image_url
+    image.onload = () => {
         const wrh = image.width / image.height
         let newWidth = EDGE
         let newHeight = newWidth / wrh
@@ -28,7 +28,7 @@ const Product: React.FC<Props> = ({ product }) => {
         const xOffset = newWidth < EDGE ? (EDGE - newWidth) / 2 : 0
         const yOffset = newHeight < EDGE ? (EDGE - newHeight) / 2 : 0
         canvas?.drawImage(image, xOffset, yOffset, newWidth, newHeight)
-      })
+    }
   }, [])
 
   const productBody = product.body_html.replaceAll(/<\s*span[^>]*>[^<]+(http)(.*?)(.png|jpg)<\/span>/g, "")
