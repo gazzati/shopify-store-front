@@ -1,0 +1,4 @@
+## Start application
+```
+yarn start
+```

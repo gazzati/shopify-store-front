@@ -1,0 +1,29 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(2, 12, 27, 1);
+  font-family: sans-serif;
+}
+
+.content {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 32px;
+}
+
+.product {
+  width: 300px;
+  height: 600px;
+  background-color: #0a192f;
+  color: #8892b0;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  line-height: 12px;
+  justify-content: space-between;
+}
